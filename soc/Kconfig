@@ -6,6 +6,10 @@ config EXYNOS
 	bool
 	default n
 
+config MARVELL
+	bool
+	default n
+
 config QUALCOMM
 	bool
 	default n
@@ -54,6 +58,13 @@ config QUALCOMM
 		select EXYNOS
 		help
 		  Say Y if your device uses Samsung Exynos990 SoC
+
+	config MARVELL_PXA1908
+		bool "Support for PXA1908"
+		default n
+		select MARVELL
+		help
+		  Say Y if your device uses Marvell PXA1908 SoC
 
 	config QC32_8916
 		bool "Support for QUALCOMM MSM8916"
